@@ -29,7 +29,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="bg-gray-50 dark:bg-gray-900 py-20 px-6 md:px-20">
+    <section id="skills" className="bg-gradient-to-b from-[#0a192f] to-[#0f2744] py-20 px-6 md:px-20 text-white">
+
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -62,7 +63,8 @@ const Skills = () => {
                 whileHover={{ y: -5 }}
                 className="group"
               >
-                <div className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+                <div className="flex flex-col items-center p-4 bg-[#112240] hover:bg-[#0f2b45] rounded-lg transition-all">
+
                   <div className="w-14 h-14 mb-3 flex items-center justify-center">
                     <div 
                       className="w-10 h-10 transition-transform group-hover:scale-110"
@@ -81,8 +83,10 @@ const Skills = () => {
         </div>
 
         {/* Capabilities */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center">
+       <div className="bg-[#112240] hover:bg-[#0f2b45] rounded-xl p-8">
+
+          <h3 className="text-xl font-semibold text-white mb-8 text-center">
+
             DEVELOPMENT CAPABILITIES
           </h3>
           
@@ -102,9 +106,8 @@ const Skills = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="ml-3 text-gray-700 dark:text-gray-300">
-                  {item}
-                </p>
+                <p className="text-gray-300">{item}</p>
+
               </motion.div>
             ))}
           </div>
