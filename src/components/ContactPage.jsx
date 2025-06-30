@@ -188,7 +188,9 @@ const ContactPage = () => {
               <div className="flex flex-col items-center mb-6">
                 {/* Circular Image Frame */}
                 <motion.div
-                  className="relative w-32 h-32 rounded-full border-4 border-blue-400 overflow-hidden mb-4"
+                 className="relative w-36 h-36 rounded-full border-4 border-blue-400 overflow-hidden mb-4"
+
+
                   variants={imageVariants}
                   initial="hidden"
                   animate="visible"
@@ -197,7 +199,9 @@ const ContactPage = () => {
                  <img 
   src={profileImage}
   alt="Harshit Sethi"
-  className="w-full h-full object-cover"
+   className="w-full h-full object-contain"  /* or object-cover if preferred */
+  
+
 />
                 </motion.div>
                 <h3 className="text-xl font-bold text-blue-400">Harshit Sethi</h3>
