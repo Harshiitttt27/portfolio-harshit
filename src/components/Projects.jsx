@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBlog, FaBriefcase, FaMoneyBillWave, FaRobot, FaTelegram } from "react-icons/fa";
-import { SiDjango, SiReact, SiTailwindcss, SiPostgresql, SiSqlite } from "react-icons/si";
+import { 
+  FaBlog, FaBriefcase, FaMoneyBillWave, FaRobot, FaTelegram, FaDocker, FaChartLine 
+} from "react-icons/fa";
+import { 
+  SiDjango, SiReact, SiTailwindcss, SiPostgresql, SiSqlite, SiStripe, SiTensorflow 
+} from "react-icons/si";
 
 const Projects = () => {
   const projects = [
@@ -9,11 +13,16 @@ const Projects = () => {
       title: "Daily Thoughts – Blog Website",
       description: "Full-stack blog platform with CRUD operations, user authentication, and profile management.",
       features: [
-        "Post likes and comments system",
-        "Responsive UI for all devices",
-        "Admin control panel",
-        "Deployed on Render"
-      ],
+  "Full CRUD operations for posts and user profiles",
+  "User registration, login, and authentication system",
+  "Post likes and threaded comments system",
+  "Profile management with bio and avatar uploads",
+  "Responsive UI optimized for mobile, tablet, and desktop",
+  "Admin panel for managing posts and users",
+  "SEO-friendly blog URLs",
+  "Deployed on Render with production-ready settings"
+],
+
       technologies: [
         { name: "Django", icon: <SiDjango className="text-green-500" /> },
         { name: "HTML/CSS", icon: <span className="text-orange-500">{"</>"}</span> },
@@ -26,11 +35,16 @@ const Projects = () => {
       title: "Worknet - Job Portal",
       description: "Full-stack job portal connecting employers with job seekers.",
       features: [
-        "Admin job management",
-        "User application system",
-        "Responsive interface",
-        "Django REST API backend"
-      ],
+  "Employer and job seeker registration with role-based access",
+  "Job posting and management system for employers",
+  "Job application system for users with application tracking",
+  "Admin dashboard for managing jobs, users, and applications",
+  "Email notifications for job applications",
+  "Responsive interface built with Tailwind CSS and React",
+  "JWT Authentication with Django REST Framework",
+  "API-first design with React frontend consuming Django APIs"
+],
+
       technologies: [
         { name: "Django REST", icon: <SiDjango className="text-green-500" /> },
         { name: "React", icon: <SiReact className="text-blue-400" /> },
@@ -40,54 +54,32 @@ const Projects = () => {
       link: "https://github.com/Harshiitttt27/worknet-job-portal.git",
       icon: <FaBriefcase className="text-blue-400 text-3xl" />
     },
+   
+  
     {
-      title: "Expense Tracker Backend",
-      description: "REST API for tracking expenses with analytics dashboard.",
+      title: "StockInsight - Micro SaaS for Stock Prediction",
+      description: "A production-ready, Dockerized micro-SaaS platform for stock price prediction using LSTM models with Django, Telegram bot, and Stripe integration.",
       features: [
-        "JWT Authentication",
-        "Expense analytics",
-        "Date range filtering",
-        "Custom user model"
+        "Next-day stock price prediction using LSTM (Keras/TensorFlow)",
+        "Django REST API with JWT Authentication",
+        "Telegram bot interface for predictions",
+        "Stripe integration for Pro subscriptions",
+        "Dockerized deployment with Gunicorn & health checks",
+        "Web dashboard with Tailwind CSS frontend",
+        "Quota system: 5 predictions/day Free; Unlimited Pro"
       ],
       technologies: [
-        { name: "Django REST", icon: <SiDjango className="text-green-500" /> },
+        { name: "Django", icon: <SiDjango className="text-green-500" /> },
+        { name: "Django REST Framework", icon: <SiDjango className="text-green-500" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" /> },
+        { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+        { name: "Telegram Bot API", icon: <FaTelegram className="text-blue-400" /> },
+        { name: "Stripe API", icon: <SiStripe className="text-purple-500" /> },
+        { name: "TensorFlow/Keras", icon: <SiTensorflow className="text-orange-400" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> }
       ],
-      link: "https://github.com/Harshiitttt27/expense_tracker.git",
-      icon: <FaMoneyBillWave className="text-blue-400 text-3xl" />
-    },
-    {
-      title: "E-commerce Chatbot",
-      description: "AI-powered shopping assistant for e-commerce platforms.",
-      features: [
-        "Product search by keywords",
-        "Conversational interface",
-        "Instant product filtering",
-        "Django REST backend"
-      ],
-      technologies: [
-        { name: "Django", icon: <SiDjango className="text-green-500" /> },
-        { name: "React", icon: <SiReact className="text-blue-400" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> }
-      ],
-      link: "https://github.com/Harshiitttt27/ecom-chatbot.git",
-      icon: <FaRobot className="text-blue-400 text-3xl" />
-    },
-    {
-      title: "Django Telegram Bot",
-      description: "Backend system with Telegram bot integration.",
-      features: [
-        "Celery background tasks",
-        "Redis integration",
-        "Telegram Bot API",
-        "Django REST Framework"
-      ],
-      technologies: [
-        { name: "Django", icon: <SiDjango className="text-green-500" /> },
-        { name: "Telegram API", icon: <FaTelegram className="text-blue-400" /> }
-      ],
-      link: "https://github.com/Harshiitttt27/Telegram_bot.git",
-      icon: <FaTelegram className="text-blue-400 text-3xl" />
+      link: "https://github.com/Harshiitttt27/stockinsight.git",
+      icon: <FaChartLine className="text-indigo-500 text-3xl" />
     }
   ];
 
@@ -154,6 +146,7 @@ const Projects = () => {
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     className="inline-block text-blue-400 hover:text-blue-300 font-medium border border-blue-400 px-4 py-2 rounded hover:bg-blue-400/10 transition-colors text-center"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     View Project
                   </motion.a>
