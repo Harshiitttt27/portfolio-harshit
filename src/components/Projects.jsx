@@ -1,64 +1,85 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  FaBlog, FaBriefcase, FaMoneyBillWave, FaRobot, FaTelegram, FaDocker, FaChartLine 
+import {
+  FaBlog,
+  FaBriefcase,
+  FaMoneyBillWave,
+  FaRobot,
+  FaTelegram,
+  FaDocker,
+  FaChartLine,
+  FaYoutube,
 } from "react-icons/fa";
-import { 
-  SiDjango, SiReact, SiTailwindcss, SiPostgresql, SiSqlite, SiStripe, SiTensorflow 
+import {
+  SiDjango,
+  SiReact,
+  SiTailwindcss,
+  SiPostgresql,
+  SiSqlite,
+  SiStripe,
+  SiTensorflow,
 } from "react-icons/si";
 
 const Projects = () => {
   const projects = [
     {
       title: "Daily Thoughts – Blog Website",
-      description: "Full-stack blog platform with CRUD operations, user authentication, and profile management.",
+      description:
+        "Full-stack blog platform with CRUD operations, user authentication, and profile management.",
       features: [
-  "Full CRUD operations for posts and user profiles",
-  "User registration, login, and authentication system",
-  "Post likes and threaded comments system",
-  "Profile management with bio and avatar uploads",
-  "Responsive UI optimized for mobile, tablet, and desktop",
-  "Admin panel for managing posts and users",
-  "SEO-friendly blog URLs",
-  "Deployed on Render with production-ready settings"
-],
-
+        "Full CRUD operations for posts and user profiles",
+        "User registration, login, and authentication system",
+        "Post likes and threaded comments system",
+        "Profile management with bio and avatar uploads",
+        "Responsive UI optimized for mobile, tablet, and desktop",
+        "Admin panel for managing posts and users",
+        "SEO-friendly blog URLs",
+        "Deployed on Render with production-ready settings",
+      ],
       technologies: [
         { name: "Django", icon: <SiDjango className="text-green-500" /> },
-        { name: "HTML/CSS", icon: <span className="text-orange-500">{"</>"}</span> },
-        { name: "SQLite", icon: <SiSqlite className="text-blue-400" /> }
+        {
+          name: "HTML/CSS",
+          icon: <span className="text-orange-500">{"</>"}</span>,
+        },
+        { name: "SQLite", icon: <SiSqlite className="text-blue-400" /> },
       ],
       link: "https://github.com/Harshiitttt27/blog-website-django.git",
-      icon: <FaBlog className="text-blue-400 text-3xl" />
+      icon: <FaBlog className="text-blue-400 text-3xl" />,
     },
     {
       title: "Worknet - Job Portal",
-      description: "Full-stack job portal connecting employers with job seekers.",
+      description:
+        "Full-stack job portal connecting employers with job seekers.",
       features: [
-  "Employer and job seeker registration with role-based access",
-  "Job posting and management system for employers",
-  "Job application system for users with application tracking",
-  "Admin dashboard for managing jobs, users, and applications",
-  "Email notifications for job applications",
-  "Responsive interface built with Tailwind CSS and React",
-  "JWT Authentication with Django REST Framework",
-  "API-first design with React frontend consuming Django APIs"
-],
-
+        "Employer and job seeker registration with role-based access",
+        "Job posting and management system for employers",
+        "Job application system for users with application tracking",
+        "Admin dashboard for managing jobs, users, and applications",
+        "Email notifications for job applications",
+        "Responsive interface built with Tailwind CSS and React",
+        "JWT Authentication with Django REST Framework",
+        "API-first design with React frontend consuming Django APIs",
+      ],
       technologies: [
         { name: "Django REST", icon: <SiDjango className="text-green-500" /> },
         { name: "React", icon: <SiReact className="text-blue-400" /> },
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> }
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="text-blue-600" />,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="text-cyan-400" />,
+        },
       ],
       link: "https://github.com/Harshiitttt27/worknet-job-portal.git",
-      icon: <FaBriefcase className="text-blue-400 text-3xl" />
+      icon: <FaBriefcase className="text-blue-400 text-3xl" />,
     },
-   
-  
     {
       title: "StockInsight - Micro SaaS for Stock Prediction",
-      description: "A production-ready, Dockerized micro-SaaS platform for stock price prediction using LSTM models with Django, Telegram bot, and Stripe integration.",
+      description:
+        "A production-ready, Dockerized micro-SaaS platform for stock price prediction using LSTM models with Django, Telegram bot, and Stripe integration.",
       features: [
         "Next-day stock price prediction using LSTM (Keras/TensorFlow)",
         "Django REST API with JWT Authentication",
@@ -66,21 +87,66 @@ const Projects = () => {
         "Stripe integration for Pro subscriptions",
         "Dockerized deployment with Gunicorn & health checks",
         "Web dashboard with Tailwind CSS frontend",
-        "Quota system: 5 predictions/day Free; Unlimited Pro"
+        "Quota system: 5 predictions/day Free; Unlimited Pro",
       ],
       technologies: [
         { name: "Django", icon: <SiDjango className="text-green-500" /> },
-        { name: "Django REST Framework", icon: <SiDjango className="text-green-500" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" /> },
+        {
+          name: "Django REST Framework",
+          icon: <SiDjango className="text-green-500" />,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="text-blue-400" />,
+        },
         { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
-        { name: "Telegram Bot API", icon: <FaTelegram className="text-blue-400" /> },
+        {
+          name: "Telegram Bot API",
+          icon: <FaTelegram className="text-blue-400" />,
+        },
         { name: "Stripe API", icon: <SiStripe className="text-purple-500" /> },
-        { name: "TensorFlow/Keras", icon: <SiTensorflow className="text-orange-400" /> },
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> }
+        {
+          name: "TensorFlow/Keras",
+          icon: <SiTensorflow className="text-orange-400" />,
+        },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="text-blue-600" />,
+        },
       ],
       link: "https://github.com/Harshiitttt27/stockinsight.git",
-      icon: <FaChartLine className="text-indigo-500 text-3xl" />
-    }
+      icon: <FaChartLine className="text-indigo-500 text-3xl" />,
+    },
+    {
+      title: "YouTube Data Collector",
+      description:
+        "A Flask-based project that scrapes YouTube channel and video data using YouTube API, with metrics, key rotation, and PostgreSQL storage.",
+      features: [
+        "Scrapes YouTube channel info (name, stats, topics, language)",
+        "Fetches video details and calculates metrics (views, uploads)",
+        "Uses rotating API keys to avoid quota exhaustion",
+        "Stores data in PostgreSQL with duplicate handling",
+        "Exposes Flask REST API endpoints for scraping and analysis",
+        "Supports discovery of similar channels based on topics/language",
+        "Modular structure with service classes and main entrypoint",
+        "Can integrate with AI tools for smarter channel suggestions",
+      ],
+      technologies: [
+        {
+          name: "Python",
+          icon: <span className="text-yellow-500 font-bold">Py</span>,
+        },
+        { name: "Flask", icon: <FaRobot className="text-red-500" /> },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="text-blue-600" />,
+        },
+        { name: "YouTube Data API", icon: <FaYoutube className="text-red-500" /> },
+        { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+      ],
+      link: "https://github.com/Harshiitttt27/youtube-collector",
+      icon: <FaRobot className="text-rose-500 text-3xl" />,
+    },
   ];
 
   return (
